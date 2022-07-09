@@ -1,27 +1,27 @@
-import Button, { ButtonSize, ButtonType } from "./components/Button";
+import Button from "./components/Button";
 function App() {
   return (
     <div className="App">
-      <Button className="123  " btnType={ButtonType.Primary}>
+      <Button className="123  " btnType={"primary"}>
         Hello
       </Button>
-      <Button btnType={ButtonType.Default}>Hello</Button>
-      <Button btnType={ButtonType.Link} href="https://www.baidu.com">
+      <Button>Hello</Button>
+      <Button btnType={"link"} href="https://www.baidu.com">
         Link
       </Button>
-      <Button btnType={ButtonType.Danger}>Hello</Button>
+      <Button btnType={"danger"}>Hello</Button>
       <hr />
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+      <Button btnType={"primary"} size={"lg"}>
         Hello
       </Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+      <Button btnType={"primary"} size={"sm"}>
         Hello
       </Button>
       <hr />
-      <Button btnType={ButtonType.Default} disabled={true}>
+      <Button btnType={"default"} disabled={true}>
         Hello
       </Button>
-      <Button btnType={ButtonType.Link} disabled={true}>
+      <Button btnType={"link"} disabled={true}>
         Hello
       </Button>
     </div>
