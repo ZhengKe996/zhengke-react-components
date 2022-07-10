@@ -1,9 +1,4 @@
-import {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  FC,
-  ReactNode,
-} from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
 
 export type ButtonSize = "lg" | "sm";
@@ -24,7 +19,7 @@ type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
-const Button: FC<ButtonProps> = (props) => {
+const Button = (props: ButtonProps) => {
   const { children, className, disabled, size, btnType, href, ...restProps } =
     props;
   const classes = classNames("btn", className, {

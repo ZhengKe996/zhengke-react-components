@@ -1,29 +1,23 @@
-import Button from "./components/Button";
+import Menu from "./components/Menu/menu";
+import SubMenu from "./components/Menu/sub-menu";
+import MenuItem from "./components/Menu/item";
 function App() {
   return (
     <div className="App">
-      <Button className="123  " btnType={"primary"}>
-        Hello
-      </Button>
-      <Button>Hello</Button>
-      <Button btnType={"link"} href="https://www.baidu.com">
-        Link
-      </Button>
-      <Button btnType={"danger"}>Hello</Button>
-      <hr />
-      <Button btnType={"primary"} size={"lg"}>
-        Hello
-      </Button>
-      <Button btnType={"primary"} size={"sm"}>
-        Hello
-      </Button>
-      <hr />
-      <Button btnType={"default"} disabled={true}>
-        Hello
-      </Button>
-      <Button btnType={"link"} disabled={true}>
-        Hello
-      </Button>
+      <Menu
+        defaultIndex={"1"}
+        onSelect={(index) => console.log(index)}
+        mode="vertical"
+        defaultOpenSubMenus={["0"]}
+      >
+        <MenuItem>001</MenuItem>
+        <MenuItem>002</MenuItem>
+        <SubMenu title="hello">
+          <MenuItem>003</MenuItem>
+          <MenuItem>003</MenuItem>
+          <MenuItem>003</MenuItem>
+        </SubMenu>
+      </Menu>
     </div>
   );
 }
